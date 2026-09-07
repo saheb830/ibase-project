@@ -1,0 +1,403 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f7fb;
+    color: #222;
+}
+
+/* Header */
+.header {
+    background: #172554;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #93c5fd;
+}
+
+/* Hero */
+.hero {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    padding: 60px 7%;
+    background: linear-gradient(
+        135deg,
+        #1e3a8a,
+        #2563eb
+    );
+    color: white;
+}
+
+.hero h1 {
+    max-width: 700px;
+    font-size: 46px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #f59e0b;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #d97706;
+}
+
+/* Container */
+.container {
+    width: 86%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: #172554;
+}
+
+/* Dashboard */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card .icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 30px;
+    color: #2563eb;
+}
+
+.card p {
+    margin-top: 5px;
+    color: #666;
+}
+
+/* Search */
+.search-area {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.search-area input,
+.search-area select {
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.search-area input {
+    flex: 1;
+}
+
+/* Books */
+.book-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.book-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+.book-cover {
+    height: 160px;
+    background: #dbeafe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+}
+
+.book-info {
+    padding: 20px;
+}
+
+.book-info h3 {
+    color: #172554;
+    margin-bottom: 10px;
+}
+
+.book-info p {
+    margin: 7px 0;
+    color: #666;
+}
+
+.category {
+    display: inline-block;
+    background: #e0e7ff;
+    color: #3730a3;
+    padding: 5px 9px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.available {
+    color: green;
+    font-weight: bold;
+}
+
+.issued {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.reserve-btn {
+    width: 100%;
+    margin-top: 12px;
+}
+
+/* Table */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #172554;
+    color: white;
+}
+
+.cancel-btn {
+    background: #dc2626;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background: #b91c1c;
+}
+
+/* About */
+.about {
+    background: white;
+    padding: 60px 0;
+}
+
+.about p {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.7;
+    color: #555;
+}
+
+.features {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.features div {
+    background: #f4f7fb;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.features h3 {
+    color: #172554;
+    margin-bottom: 10px;
+}
+
+.features p {
+    text-align: left;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    margin: 6% auto;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.modal-content h2 {
+    color: #172554;
+    margin-bottom: 20px;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content .btn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .book-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .dashboard,
+    .book-container,
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .search-area {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}
